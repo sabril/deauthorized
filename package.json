@@ -1,0 +1,18 @@
+{
+  "name": "Deauthorized",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "^3.2.0",
+    "babel-preset-react": "^6.24.1",
+    "civic-sip-api": "^0.4.2",
+    "coffeescript": "1.12.7",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-webcam": "^0.2.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "webpack-dev-server": "^2.10.1"
+  }
+}

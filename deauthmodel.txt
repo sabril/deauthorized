@@ -1,0 +1,28 @@
+provider (doorkeeper):
+    GET /user_id/authorized_app
+    POST /user/:id/authorized_app/shutdown/private_key
+
+User_generate_keys
+  create key pair
+  send the public key on POST upon authentication with client app
+  save the private key in our database and send to the client app POST on shutdown
+
+
+client:
+    GET /secret_shutdown_code => write code on client app
+    POST /fraud_notices/
+    POST /updates
+
+
+    Public Key Encryption Key =>  Private Key
+
+    Users Table
+    id:
+    name:
+    email:
+    pub_key: true
+    private_key: ____
+
+    kill the user session
+    deauth the user from logging in
+    

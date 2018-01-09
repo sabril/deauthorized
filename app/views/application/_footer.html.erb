@@ -1,0 +1,76 @@
+<!-- ========== FOOTER ========== -->
+<footer class="light-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<%= image_tag('deauthorized.png', class: "footer-logo") %>
+			</div>
+
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<h6 class="mtn">HOME</h6>
+				<ul>
+					<li>
+						<%= link_to "Home", root_path %>
+					</li>
+					<!-- <li> <%= link_to "About Us", about_us_path %> </li> <li> <%= link_to "Pricing", pricing_path %> </li> -->
+					<li>
+						<%= link_to "Privacy Policy", privacy_policy_path %>
+					</li>
+					<li>
+						<%= link_to "Terms of Service", terms_of_service_path %>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<h6 class="mtn">CONSUMERS</h6>
+				<ul>
+					<li>
+						<%= link_to "Features", consumers_path %>
+					</li>
+					<li>
+						<%= link_to "Login", new_user_session_path %>
+					</li>
+					<li>
+						<%= link_to "Sign Up", new_user_registration_path %>
+					</li>
+
+				</ul>
+			</div>
+
+			<div class="col-md-4 col-sm-8 col-sm-offset-2 col-md-offset-0">
+				<h6 class="mtn">SUBSCRIBE</h6>
+				<div class="input-group">
+					<input type="email" class="form-control inp-rounded" placeholder="Enter your email id">
+					<span class="input-group-btn">
+						<button class="btn se-btn btn-rounded" type="button">Subscribe!</button>
+					</span>
+					<!-- end input-group-btn -->
+				</div>
+				<!-- end input-group -->
+				<p class="text-center text-muted">We don't spam!</p>
+			</div>
+		</div>
+		<!-- end row -->
+
+		<div class="row footer-bottom">
+			<div class="col-md-6">
+				<p>Copyright &copy; Deauthorized 2017. All Rights Reserved.</p>
+			</div>
+
+			<div class="col-md-6 text-right">
+				<h6>
+					<a href="https://facebook.com/deauthorized" target="_blank">FACEBOOK</a>
+				</h6>
+				<h6>
+					<a href="https://twitter.com/deauthorized" target="_blank">TWITTER</a>
+				</h6>
+				<h6>
+					<a href="https://medium.com/@deauthorized" target="_blank">MEDIUM</a>
+				</h6>
+			</div>
+		</div>
+		<!-- end footer-bottom -->
+	</div>
+	<!-- end container -->
+</footer>

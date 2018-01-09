@@ -1,0 +1,99 @@
+========================================================================================
+ALREADY BUILT:
+========================================================================================
+  base website
+  user login / signup / logout
+  businesses login / signup
+  user verification
+  stripe integration
+  user notices
+  started API docs
+
+========================================================================================
+SOFTWARE TO BUILD:
+========================================================================================
+  User:
+    mobile app
+      authenticated apps
+      notices {{ approve / deny / shutdown }}
+      issue shutdown
+      restoration
+  Business:
+    Web Platform + Dashboard Management
+  User + Business:
+    API Service
+  SDK for Suspending User Session / Account Access
+    Ruby - MVP
+      gem install 'signal0x'
+      rails generate signal0x:install
+      adds config, db migration, allows signal0x permission to post to app on behalf of user
+      GET Shutdown to Devise sign_out user
+      GET Shutdown to active_for_authentication
+      POST email_reset password_reset
+      GET email_reset password_reset id_verification
+      GET Restore to active_for_authentication
+
+    JS
+    iOS
+    Java
+    .NET
+
+========================================================================================
+SOFTWARE TO INTEGRATE:
+========================================================================================
+  Gluu Single Sign-On + Open ID Connect + Super Gluu
+
+
+========================================================================================
+USER FEATURES:
+========================================================================================
+  register
+  authenticate with registered apps Username + Password and connect services
+  receive notices about unusual activity from services
+  notify apps of account takeover, issue POST to apps for account Shutdown
+  approve transactions
+  verify user for shutdown services (Facial Recognition)
+  Restore account with business RESTORE
+
+
+========================================================================================
+BUSINESSES FEATURES:
+========================================================================================
+  register with our system  - devise - done
+  app registration - RegisteredApp name:string description:text secret_key:string publishable_key:string
+    API credentials to POST to and GET User authenticated accounts
+  Send authorizations / approvals Approvals
+  GET Shutdown Requests
+  Restore User Account RestoreAccount id_verification:string password_reset:string
+
+
+========================================================================================
+APP SPECIFIC FEATURES:
+========================================================================================
+
+Apps (email + social media):
+  POST notices about suspicious activity on account from 3rd party API threat detection
+    login locations
+    IP addresses
+    Multiple attempts on the accounts
+    ML tools
+    irregular activity
+
+Telcos:
+  POST notices to users about each account access
+  POST notices to users about port requests
+  POST notices to users about account changes
+
+Banks + Digital Assets + Paypal:
+  POST approvals about high withdraw attempts / wires / ACH alerts over X amount of dollars
+
+
+========================================================================================
+NICE TO HAVE's
+========================================================================================
+
+Internal:
+  data breach notices to users to be on high alert (news robot to report breach news and match any connected accounts with users)
+
+Third Party APIs:
+  spycloud: monitor user email exposure and receive notices to mobile app

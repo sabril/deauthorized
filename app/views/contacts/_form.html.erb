@@ -1,0 +1,69 @@
+<section class="se-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Ready for a demo? Get in touch.</h1>
+      </div>
+    </div>
+    <div class="row margin-top-50">
+      <%= form_with(model: contact, local: true, class: "col-md-9 col-sm-6") do |form| %>
+      <% if contact.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(contact.errors.count, "error") %>
+          prohibited this contact from being saved:</h2>
+
+        <ul>
+          <% contact.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+      <div class="form-group col-md-12">
+        <%= form.label :name %>
+        <%= form.text_field :name, id: :contact_name, class: "form-control" %>
+      </div>
+      <div class="form-group col-md-12">
+        <%= form.label :phone %>
+        <%= form.text_field :phone, id: :contact_phone, class: "form-control" %>
+      </div>
+      <div class="form-group col-md-12">
+        <%= form.label :email %>
+        <%= form.text_field :email, id: :contact_email, class: "form-control" %>
+      </div>
+      <div class="form-group col-md-12">
+        <label for="">What type of enterprise are you?</label>
+        <%= form.text_field :catgegory, id: :contact_catgegory, class: "form-control" %>
+      </div>
+      <div class="form-group col-md-12">
+        <%= form.label :message %>
+        <%= form.text_area :message, id: :contact_message, class: "form-control", rows: "6" %>
+      </div>
+      <div class="text-center col-md-12 mt10 mb20">
+        <%= form.submit "Submit", class: "btn se-btn btn-rounded" %>
+      </div>
+      <!-- end text-center -->
+      <% end %>
+
+      <div class="col-md-3 col-sm-6 contact-info">
+        <h6 class="underline mtn">Address</h6>
+        <p>
+          600 Congress Avenue<br>
+          14th Floor
+          <br/>
+          Austin, Texas
+          <br>
+          United States - 78701
+        </p>
+        <!-- <h6 class="underline mtn">Email Address</h6>
+        <p>
+          support@themesease.com<br>
+          help@example.net
+        </p> -->
+      </div>
+      <!-- end contact-info -->
+    </div>
+    <!-- end row -->
+  </div>
+  <!-- end container -->
+</section>

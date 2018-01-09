@@ -1,0 +1,34 @@
+API
+
+users:
+authenticated_apps:
+issue_shutdowns: request_made:bool id_verification:bool
+restore_accounts: request_issued:bool id_verification:bool email_reset:bool password_reset:bool authenticated_app:references
+
+
+
+businesses:
+authenticated_apps:  name:string description:text callback_url:string secret_key:string publishable_key:string
+notices:
+
+
+users register
+businesses register
+
+# Oauth - Ruby App
+businesses register authenticated_apps
+users authorize authenticated_apps with email / password
+
+businesses POST notices {logins/transactions/transfer} to users
+users GET notices about fraud on authenticated apps
+users POST response to notices {{ approve / deny / shutdown }}
+businesses GET notice approve, continue action
+businesses GET notice deny, kill action
+businesses GET notice shutdown, suspend user account, end online sessions
+
+
+rails g scaffold authenticated_app  name:string description:text callback_url:string secret_key:string publishable_key:string
+rails g scaffold issue_shutdown request_made:bool id_verification:bool authenticated_app:references
+rails g scaffold restore_account request_issued:bool id_verification:bool email_reset:bool password_reset:bool authenticated_app:references
+
+rails g migration AddAuthenticatedAppRefToUsers authenticated_app:references

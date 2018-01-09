@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- ========== VIEWPORT META ========== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+    <!-- ========== PAGE TITLE ========== -->
+    <title>Deauthorized</title>
+
+    <!-- ========== META TAGS ========== -->
+    <meta name="description" content="Deauthorized is a security mechanism that allows you to prevent account takeover so you can protect your online assets from hackers.">
+    <meta name="keywords" content="software, mobile app, secruity, saas">
+    <meta name="author" content="Deauthorized">
+
+    <!-- =========== GOOGLE APPS TAG =============== -->
+    <meta name="google-site-verification" content="kwpRh3pLNb2eJg2_M3csAQADTVzfI_XZShZ7lbFyuRU"/>
+
+    <!-- ========== FAVICON & APPLE ICONS ========== -->
+    <link rel="shortcut icon" href="">
+    <link rel="apple-touch-icon" href="">
+
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag  'front', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css"/>
+    <link rel="application/vnd.ms-fontobject" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/fonts/ionicons.eot"/>
+    <link rel="application/font-woff" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/fonts/ionicons.svg"/>
+    <link rel="image/svg+xml" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/fonts/ionicons.ttf"/>
+    <link rel="application/font-sfnt" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/fonts/ionicons.woff"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <%= javascript_include_tag 'front', 'data-turbolinks-track' => true  %>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.0.2/particles.js" integrity="sha256-qKZRwy1i72Brip0WA/eKo5fd/tkPyt7uECtdjvs7jxI=" crossorigin="anonymous"></script>
+    <!-- Webpacker Assets -->
+    <%= javascript_pack_tag 'application' %>
+
+  </head>
+
+  <!-- ========== BODY ==========
+    .light-header: for light colored header
+    .dark-header: for dark colored header
+    ==========  ========== -->
+  <body>
+    <%= render 'header' %>
+    <%= yield %>
+    <%= render 'footer' %>
+    <%= render 'scripts' %>
+  </body>
+</html>

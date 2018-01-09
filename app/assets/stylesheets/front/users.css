@@ -1,0 +1,32 @@
+.stripe-button-el span   {
+  padding: 12px 26px !important;
+  color: #fff !important;
+  background-color:  none !important;
+  background: none !important;
+  border-color: #535353 !important;
+  border-radius: 45px !important;
+  margin-bottom: 1px !important;
+  font-family: 'Montserrat', sans-serif !important;
+  text-transform: uppercase !important;
+  font-weight: 300 !important;
+  letter-spacing: 2px !important;
+  font-size: 10px !important;
+  background-image: none !important;
+  line-height: 1.3333333 !important;
+  overflow: hidden;
+  display: block !important;
+}
+
+button.stripe-button-el {
+  background-color:  none !important;
+  background: none !important;
+  border-color: #535353 !important;
+  border-radius: 45px !important;
+  background-image: none !important;
+  box-shadow: 2px #535353 !important;
+}
+
+
+button.stripe-button-el:hover {
+  background-color:  #3498db !important;
+}

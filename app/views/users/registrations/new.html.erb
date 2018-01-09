@@ -1,0 +1,76 @@
+<!-- ========== HEADER ========== -->
+<header class="header main-header header-style-3" id="circular-particles">
+  <div class="primary-trans-bg">
+    <div class="container margin-top-50">
+      <!-- For centering the content vertically -->
+      <div class="outer">
+        <div class="inner">
+          <div class="row">
+            <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2 form-wrap">
+              <div class="text-center logo-wrap">
+                <h2>User Sign Up</h2>
+              </div>
+              <!-- end text-center -->
+
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= devise_error_messages! %>
+              <!-- <div class="form-group col-md-6">
+                                  <label for="firstname">First Name</label>
+                                  <input type="text" class="form-control" id="firstname" placeholder="First Name" required="">
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label for="lastname">Last Name</label>
+                                  <input type="text" class="form-control" id="lastname" placeholder="Last Name" required="">
+                                </div> -->
+              <div class="form-group col-md-12">
+                <label for="exampleInputEmail1">Email Address</label>
+                <%= f.email_field :email, placeholder: "Email", class: "form-control", autofocus: true %>
+              </div>
+              <div class="form-group col-md-12">
+                <label for="password">Password</label>
+                <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "form-control", autofocus: true %>
+              </div>
+
+              <div class="form-group col-md-12">
+                <label for="password">Confirm Password</label>
+                <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm Password", class: "form-control", autofocus: true %>
+              </div>
+
+              <div class="text-center col-md-12 mt10 mb20">
+                <%= f.submit "Sign up", class: "btn se-btn btn-rounded" %>
+              </div>
+              <!-- end text-center -->
+              <% end %>
+              <!-- end form -->
+<!-- 
+              <div class="social-login col-md-12 mb20 text-center">
+                <p>Or you can sign up using your social account.</p>
+                <a href="#" class="btn se-btn fb-btn">
+                  <i class="icon ion-social-facebook"></i>
+                  FaceBook</a>
+                <a href="#" class="btn se-btn tw-btn">
+                  <i class="icon ion-social-twitter"></i>
+                  Twitter</a>
+                <a href="#" class="btn se-btn gp-btn">
+                  <i class="icon ion-social-googleplus"></i>
+                  Google Plus</a>
+              </div> -->
+              <!-- end social-login -->
+
+              <div class="col-sm-12 text-center">
+                <p class="text-muted mbn">Already Registered?
+                  <%= render "users/shared/links" %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- end inner -->
+      </div>
+      <!-- end outer -->
+    </div>
+    <!-- end container -->
+  </div>
+  <!-- end primary-trans-bg -->
+</header>
