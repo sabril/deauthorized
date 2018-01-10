@@ -1,0 +1,3 @@
+class MfaRegistrations < ApplicationRecord
+
+end

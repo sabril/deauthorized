@@ -18,13 +18,19 @@ Rails.application.routes.draw do
     }
 
   namespace :users do
-    get '/dashboard', to: 'dashboard#index',    as: 'dashboard', controller: 'users/dashboard'
+    get '/dashboard', to: 'dashboard#index', as: 'dashboard', controller: 'users/dashboard'
     resources :charges
     resources :apps
     resources :devices
     resources :administrators
     resources :settings
     resources :reports
+    scope 'mfa' do
+      get '/authenticate/new', to: 'mfa_authentications#new', as: 'authenticate', controller: 'users/mfa_authentications'
+    end
+    scope 'mfa' do
+      get '/register/new', to: 'mfa_registrations#new', as: 'register', controller: 'users/mfa_registrations'
+    end
   end
 
 end

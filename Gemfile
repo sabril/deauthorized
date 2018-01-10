@@ -34,6 +34,8 @@ gem 'active_model_serializers'
 # Secruity
 gem 'bundler-audit'
 gem 'brakeman'
+gem 'u2f'
+
 
 # Heroku Caching
 gem 'rack-cache'
