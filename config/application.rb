@@ -19,7 +19,7 @@ module Deauthorized
     # -- all .rb files in that directory are automatically loaded.
 
     # Added Active elastic job for Active job
-    config.active_job.queue_adapter = :active_elastic_job
+    # config.active_job.queue_adapter = :active_elastic_job
 
     # Establish Dalli as client for cache store
     config.cache_store = :dalli_store
