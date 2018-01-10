@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   get 'about_us' => 'home#about_us', as: 'about_us'
   get 'pricing' => 'home#pricing', as: 'pricing'
   get 'consumers' => 'home#consumers', as: 'consumers'
-  get 'enterprises' => 'home#enterprises', as: 'enterprises'
   get 'privacy_policy' => 'home#privacy_policy', as: 'privacy_policy'
   get 'terms_of_service' => 'home#terms_of_service', as: 'terms_of_service'
   resources :contacts, only: %i[new create update]
@@ -17,4 +16,15 @@ Rails.application.routes.draw do
       registrations: 'users/registrations',
       sessions:      'users/sessions'
     }
+
+  namespace :users do
+    get '/dashboard', to: 'dashboard#index',    as: 'dashboard', controller: 'users/dashboard'
+    resources :charges
+    resources :apps
+    resources :devices
+    resources :administrators
+    resources :settings
+    resources :reports
+  end
+
 end

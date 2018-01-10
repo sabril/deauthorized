@@ -21,7 +21,7 @@ class Users::SessionsController < Devise::SessionsController
   protected
 
   def after_signin_path_for(resource)
-    new_users_verfication_path
+    users_dashboard_path
   end
 
   # If you have extra params to permit, append them to the sanitizer.

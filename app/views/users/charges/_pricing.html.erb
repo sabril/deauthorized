@@ -1,9 +1,9 @@
-<%= form_tag businesses_charges_path do %>
+<%= form_tag users_charges_path do %>
 <article>
   <% if flash[:error].present? %>
-  <div id="error_explanation">
-    <p><%= flash[:error] %></p>
-  </div>
+    <div id="error_explanation">
+      <p><%= flash[:error] %></p>
+    </div>
   <% end %>
 
   <section id="pricing-option3" class="background1 section-padding">
@@ -27,10 +27,7 @@
             <li class="plan-name plan-name-option3">Basic
               <h2 class="no-margin">$50</h2>
               / annual</li>
-            <!-- <li><strong>400GB</strong> Bandwidth</li>
-          <li><strong>10</strong> Email Address</li>
-          <li><strong>Forum</strong> Support</li>
-          <li><strong>NO Free</strong> Squirel</li> -->
+            <!-- <li><strong>400GB</strong> Bandwidth</li> <li><strong>10</strong> Email Address</li> <li><strong>Forum</strong> Support</li> <li><strong>NO Free</strong> Squirel</li> -->
             <li class="plan-action">
               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:stripe_publishable_key] %>" data-description="Basic plan subscription" data-label="Sign Up" data-amount="5000" data-locale="auto"></script>
 
@@ -45,10 +42,7 @@
             <li class="plan-name plan-name-option3">Standard
               <h2 class="no-margin">$100</h2>
               / annual</li>
-            <!-- <li><strong>400GB</strong> Bandwidth</li>
-          <li><strong>10</strong> Email Address</li>
-          <li><strong>Forum</strong> Support</li>
-          <li><strong>NO Free</strong> Squirel</li> -->
+            <!-- <li><strong>400GB</strong> Bandwidth</li> <li><strong>10</strong> Email Address</li> <li><strong>Forum</strong> Support</li> <li><strong>NO Free</strong> Squirel</li> -->
             <li class="plan-action">
               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:stripe_publishable_key] %>" data-description="Standard subscription" data-label="Sign Up" data-amount="10000" data-locale="auto"></script>
 
@@ -63,10 +57,7 @@
             <li class="plan-name plan-name-option3">Advanced
               <h2 class="no-margin">$200</h2>
               / annual</li>
-            <!-- <li><strong>1024GB</strong> Bandwidth</li>
-          <li><strong>Unlimited</strong> Email Address</li>
-          <li><strong>Forum</strong> Support</li>
-          <li><strong>Free</strong> Squirel</li> -->
+            <!-- <li><strong>1024GB</strong> Bandwidth</li> <li><strong>Unlimited</strong> Email Address</li> <li><strong>Forum</strong> Support</li> <li><strong>Free</strong> Squirel</li> -->
             <li class="plan-action">
               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:stripe_publishable_key] %>" data-description="Advanced subscription" data-label="Sign Up" data-amount="20000" data-locale="auto"></script>
 
@@ -81,10 +72,7 @@
             <li class="plan-name plan-name-option3">Mighty
               <h2 class="no-margin">$400</h2>
               / annual</li>
-            <!-- <li><strong>1024GB</strong> Bandwidth</li>
-          <li><strong>Unlimited</strong> Email Address</li>
-          <li><strong>Forum</strong> Support</li>
-          <li><strong>Free</strong> Squirel</li> -->
+            <!-- <li><strong>1024GB</strong> Bandwidth</li> <li><strong>Unlimited</strong> Email Address</li> <li><strong>Forum</strong> Support</li> <li><strong>Free</strong> Squirel</li> -->
             <li class="plan-action">
               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:stripe_publishable_key] %>" data-description="Mighty subscription" data-label="Sign Up" data-amount="40000" data-locale="auto"></script>
 

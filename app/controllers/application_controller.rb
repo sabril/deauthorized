@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   #   # and signing up work automatically.
 
   def layout_by_resource
-    if devise_controller? and user_signed_in?
+    if user_signed_in?
       'user'
     else
       'application'
