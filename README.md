@@ -1,24 +1,5 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Create a multi-tenant app using the apartment gem
+* Add apartment to the user model with a subdomain field
+* Configure the switch on the subdomain, exclude ‘www’ from subdomain on the registration
+* Keep the databases separated for each tenant - one database, one tenant
+* Write a test for the user registration and multi-tenant database creation
