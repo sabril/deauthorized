@@ -58,7 +58,7 @@ Apartment.configure do |config|
   #
   # The default behaviour is true.
   #
-  config.use_schemas = false
+  config.use_schemas = Rails.env.test?
 
   #
   # ==> PostgreSQL only options

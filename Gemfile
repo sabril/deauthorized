@@ -49,6 +49,9 @@ gem 'faker'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
   gem 'selenium-webdriver'
   gem 'pry'
   gem 'awesome_print'
@@ -59,6 +62,14 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :test do
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  gem 'pundit-matchers'
+  gem 'wisper-rspec', require: false
+  gem "rspec_junit_formatter" # for circleci
 end
 
 group :production, :staging do
