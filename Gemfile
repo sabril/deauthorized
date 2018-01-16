@@ -41,7 +41,9 @@ gem 'dalli'
 gem 'memcachier'
 
 # Logging
-gem 'rails_semantic_logger'
+group :development, :production do
+  gem 'rails_semantic_logger'
+end
 
 # Faker
 gem 'faker'
