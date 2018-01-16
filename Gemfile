@@ -41,13 +41,15 @@ gem 'dalli'
 gem 'memcachier'
 
 # Logging
-gem 'rails_semantic_logger'
+# gem 'rails_semantic_logger'
+
+# Faker
+gem 'faker'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-  gem 'faker'
   gem 'pry'
   gem 'awesome_print'
 end
@@ -65,3 +67,6 @@ group :production, :staging do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# multi tenant
+gem 'apartment'
