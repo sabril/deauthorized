@@ -59,11 +59,9 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # Event logging
-  # config.rails_semantic_logger.add_file_appender = false
-  # config.semantic_logger.add_appender(file_name: 'log/development.log', formatter: :color)
-  # config.rails_semantic_logger.started    = true
-  # config.rails_semantic_logger.processing = true
-  # config.rails_semantic_logger.rendered   = true
+  config.rails_semantic_logger.started    = true
+  config.rails_semantic_logger.processing = true
+  config.rails_semantic_logger.rendered   = true
 
   config.action_dispatch.tld_length = 0
 end
