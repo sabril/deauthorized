@@ -43,13 +43,20 @@ gem 'dalli'
 gem 'memcachier'
 
 # Logging
-gem 'rails_semantic_logger'
+group :development, :production do
+  gem 'rails_semantic_logger'
+end
+
+# Faker
+gem 'faker'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
   gem 'faker'
+  gem 'selenium-webdriver'
   gem 'pry'
   gem 'awesome_print'
 end
@@ -61,9 +68,20 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :test do
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  gem 'pundit-matchers'
+  gem 'wisper-rspec', require: false
+  gem "rspec_junit_formatter" # for circleci
+end
+
 group :production, :staging do
   gem 'rails_12factor'
   gem 'yui-compressor'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# multi tenant
+gem 'apartment'
